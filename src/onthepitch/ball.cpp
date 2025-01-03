@@ -20,13 +20,19 @@
 
 Ball::Ball(Match *match) : match(match) {
 
-  bounce = 0.62f; // 1 = full bounce, 0 = no bounce
-  linearBounce = 0.06f; // bigger = more brake force
-  drag = 0.015f;//previously 0.025f; // bigger = more
-  friction = 0.04f; // bigger = more
-  linearFriction = 1.6f; // bigger = more, arbitrary scale
+  //bounce = 0.62f; // 1 = full bounce, 0 = no bounce
+  bounce = 1.0f; // 1 = full bounce, 0 = no bounce
+  //linearBounce = 0.06f; // bigger = more brake force
+  linearBounce = 0.03f; // bigger = more brake force
+  //drag = 0.015f;//previously 0.025f; // bigger = more
+  drag = 0.0015f;//previously 0.025f; // bigger = more
+  //friction = 0.04f; // bigger = more
+  friction = 0.02f; // bigger = more
+  //linearFriction = 1.6f; // bigger = more, arbitrary scale
+  linearFriction = 0.8f; // bigger = more, arbitrary scale
   gravity = -9.81f;
   grassHeight = 0.025f;
+  grassHeight = 0.015f;
 
   ballTouchesNet = false;
 
